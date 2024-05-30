@@ -1,6 +1,7 @@
 {
   "name": "container",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js"
@@ -8,6 +9,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "dotenv": "^16.4.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0"
@@ -20,6 +22,7 @@
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.0",
+    "env-cmd": "^10.1.0",
     "html-webpack-plugin": "^4.5.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.88.0",

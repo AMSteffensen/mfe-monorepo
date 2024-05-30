@@ -1,0 +1,36 @@
+{
+  "name": "mfp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:container:dev": "env-cmd -f .env.container npm run start --prefix packages/container",
+    "start:dashboard:dev": "env-cmd -f .env.dashboard npm run start --prefix packages/dashboard",
+    "start:marketing:dev": "env-cmd -f .env.marketing npm run start --prefix packages/marketing",
+    "start": "concurrently \"npm run start:container:dev\" \"npm run start:dashboard:dev\" \"npm run start:marketing:dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMSteffensen/mfe-monorepo.git"
+  },
+  "author": "Andreas Steffensen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AMSteffensen/mfe-monorepo/issues"
+  },
+  "homepage": "https://github.com/AMSteffensen/mfe-monorepo#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "env-cmd": "^10.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}
